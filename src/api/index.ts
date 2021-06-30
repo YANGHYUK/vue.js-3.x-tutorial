@@ -13,11 +13,16 @@ interface IuserData {
 
 //2번
 const axiosService = axios.create({
-  baseURL: "http://localhost:3000/",
+  // baseURL: "http://localhost:3000/",
+  baseURL: "https://api.github.com/",
 });
 
 const requestUser = (userData: IuserData): any => {
   return axiosService.post("signup", userData);
 };
 
-export { requestUser };
+const requestReposRedcarpet = (): any => {
+  return axiosService.get("repos/vmg/redcarpet/issues?state=closed");
+};
+
+export { requestUser, requestReposRedcarpet };
