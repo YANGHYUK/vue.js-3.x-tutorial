@@ -5,18 +5,27 @@ export interface RootState {
   modules: any;
   getters: any;
 }
+
 // export interface State {}
 
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+import { counter } from "@/store/modules/counter";
 
 export default createStore({
-  state: {
-    a:0
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+  modules: { counter },
+  // state: {
+  //   count: 0,
+  // },
+  // getters: {
+  //   time2(state) {
+  //     return state.count * 2;
+  //   },
+  // },
+  // mutations: {
+  //   increment(state) {
+  //     state.count++;
+  //   },
+  // },
+  // actions: {},
+  // modules: {},
+});

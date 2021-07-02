@@ -59,12 +59,14 @@ export default {
       ],
     };
   },
+
   methods: {
     reverseMessage() {
       this.message = this.message
         .split("")
         .reverse()
         .join("");
+      console.log(this, "809890");
     },
   },
 };

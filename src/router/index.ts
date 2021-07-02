@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "@/views/Home.vue";
 import Method from "@/views/Method.vue";
 import ApiTest from "@/views/ApiTest.vue";
+import VuexTest from "@/views/VuexTest.vue";
 import PageNotFound from "@/views/PageNotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -22,12 +23,18 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () => Method,
   },
-
   {
     path: "/api-test",
     name: "ApiTest",
     component: () => ApiTest,
   },
+
+  {
+    path: "/vuex-test",
+    name: "VuexTest",
+    component: () => VuexTest,
+  },
+
   {
     path: "/:catchAll(.*)",
     name: "PageNotFound",
