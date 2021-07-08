@@ -23,7 +23,14 @@
 
       <div class="category">
         <span>if문: </span>
-        <span v-if="seen">이제 나를 볼수 있어요</span>
+        <span v-if="seen">이제 나를 볼 수 있어요</span>
+        <!-- <span v-else-if>이제 볼 수 없어요</span> -->
+        <span v-else>이제 볼 수 없어요</span>
+
+        <span v-show="true"
+          >v if는 생성되는데 오래걸리므로 데이터가 변하지 않고 단순 display의
+          유무만 체크하려면 v-show를 이용해야한다.
+        </span>
       </div>
 
       <div class="category">

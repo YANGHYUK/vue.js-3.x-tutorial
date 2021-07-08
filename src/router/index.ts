@@ -3,6 +3,8 @@ import Home from "@/views/Home.vue";
 import Method from "@/views/Method.vue";
 import ApiTest from "@/views/ApiTest.vue";
 import VuexTest from "@/views/VuexTest.vue";
+
+import ApiVuexTest from "@/views/ApiVuexTest.vue";
 import PageNotFound from "@/views/PageNotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -33,6 +35,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/vuex-test",
     name: "VuexTest",
     component: () => VuexTest,
+  },
+  {
+    path: "/api-vuex-test",
+    name: "ApiVuexTest",
+    component: () => ApiVuexTest,
   },
 
   {

@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/method">Method</router-link> |
     <router-link to="/api-test">API test</router-link> |
-    <router-link to="/vuex-test">Vuex test</router-link>
+    <router-link to="/vuex-test">Vuex test</router-link> |
+    <router-link to="/api-vuex-test">API Vuex test</router-link>
   </div>
   <router-view />
 </template>

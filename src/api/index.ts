@@ -21,8 +21,8 @@ const requestUser = (userData: IuserData): any => {
   return axiosService.post("signup", userData);
 };
 
-const requestReposRedcarpet = (): any => {
+const requestApiData = () => {
   return axiosService.get("repos/vmg/redcarpet/issues?state=closed");
 };
 
-export { requestUser, requestReposRedcarpet };
+export { requestUser, requestApiData };
