@@ -3,6 +3,7 @@
     ...loading
   </div>
   <div v-else>
+    <div>watcher: {{ localState.watcher }}</div>
     <div>
       <button v-on:click="onAdd">{{ localState?.count }}</button>
     </div>
@@ -31,6 +32,7 @@ export default {
   data: () => {
     return {
       count: 0,
+      watcher: "없음",
     };
   },
   setup(props) {
@@ -52,10 +54,13 @@ export default {
     };
 
     onMounted(getRquestedData);
-    const onAdd = () => {
+    const onAdd = (value) => {
       localState.count++;
     };
-    // watch(onAdd);
+    watch(
+      () => localState.count,
+      () => (localState.watcher = "발동")
+    );
 
     return {
       localState,
